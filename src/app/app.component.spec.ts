@@ -24,11 +24,6 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Simple Workflow App!');
   }));
-  it('should show a button to deploy a process', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('button#deploy-process').textContent).toContain('Deploy Process');
-  }));
   it('should show a button to start a workflow', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const compiled = fixture.debugElement.nativeElement;
