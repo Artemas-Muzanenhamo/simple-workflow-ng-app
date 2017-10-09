@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {DeployComponent} from './deploy/deploy.component';
+import {DeployComponent} from './deploy-process/deploy.component';
 import {StartComponent} from './start-process/start.component';
 import {FindComponent} from './find-process/find.component';
 import {CompleteComponent} from './complete-process/complete.component';
