@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import {DeployComponent} from './deploy/deploy.component';
 import {StartComponent} from './start-process/start.component';
 import {FindComponent} from './find-process/find.component';
+import {CompleteComponent} from './complete-process/complete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DeployComponent,
     StartComponent,
-    FindComponent
+    FindComponent,
+    CompleteComponent
   ],
   imports: [
     BrowserModule
@@ -21,7 +23,8 @@ import {FindComponent} from './find-process/find.component';
     AppComponent,
     DeployComponent,
     StartComponent,
-    FindComponent
+    FindComponent,
+    CompleteComponent
   ]
 })
 export class AppModule { }

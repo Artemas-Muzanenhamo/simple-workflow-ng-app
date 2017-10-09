@@ -24,9 +24,4 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Simple Workflow App!');
   }));
-  it('should show a button to complete a process', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('button#complete-process').textContent).toContain('Complete Process');
-  }));
 });
