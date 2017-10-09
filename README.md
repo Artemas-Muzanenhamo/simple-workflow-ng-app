@@ -1,5 +1,7 @@
 # SimpleWorkflowNgApp
 
+[![CircleCI](https://circleci.com/gh/Artemas-Muzanenhamo/simple-workflow-ng-app/tree/develop.svg?style=svg)](https://circleci.com/gh/Artemas-Muzanenhamo/simple-workflow-ng-app/tree/develop)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
 
 ## Development server
