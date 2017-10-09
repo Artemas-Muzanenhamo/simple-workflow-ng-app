@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {DeployComponent} from './deploy/deploy.component';
-import {StartComponent} from './start/start.component';
+import {StartComponent} from './start-process/start.component';
+import {FindComponent} from './find-process/find.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DeployComponent,
-    StartComponent
+    StartComponent,
+    FindComponent
   ],
   imports: [
     BrowserModule
@@ -18,7 +20,8 @@ import {StartComponent} from './start/start.component';
   bootstrap: [
     AppComponent,
     DeployComponent,
-    StartComponent
+    StartComponent,
+    FindComponent
   ]
 })
 export class AppModule { }
