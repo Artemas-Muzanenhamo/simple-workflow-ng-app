@@ -6,6 +6,7 @@ import {DeployComponent} from './deploy-process/deploy.component';
 import {StartComponent} from './start-process/start.component';
 import {FindComponent} from './find-process/find.component';
 import {CompleteComponent} from './complete-process/complete.component';
+import {ViewComponent} from './view-process/view.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {CompleteComponent} from './complete-process/complete.component';
     DeployComponent,
     StartComponent,
     FindComponent,
-    CompleteComponent
+    CompleteComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule
@@ -24,7 +26,8 @@ import {CompleteComponent} from './complete-process/complete.component';
     DeployComponent,
     StartComponent,
     FindComponent,
-    CompleteComponent
+    CompleteComponent,
+    ViewComponent
   ]
 })
 export class AppModule { }
