@@ -6,8 +6,6 @@ jobs:
       - image: circleci/node:6-browsers
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
       - run:
           name: install-dependencies
           command: yarn install

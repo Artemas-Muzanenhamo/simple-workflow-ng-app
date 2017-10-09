@@ -14,4 +14,4 @@ describe('FindProcessComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('button#find-process').textContent).toContain('Find Process');
   }));
-})
+});

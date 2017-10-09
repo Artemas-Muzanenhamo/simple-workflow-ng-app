@@ -14,4 +14,4 @@ describe('CompleteProcessComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('button#complete-process').textContent).toContain('Complete Process');
   }));
-})
+});
