@@ -7,6 +7,7 @@ import {StartComponent} from './start-process/start.component';
 import {FindComponent} from './find-process/find.component';
 import {CompleteComponent} from './complete-process/complete.component';
 import {ViewComponent} from './view-process/view.component';
+import {ViewService} from './view-process/view.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import {ViewComponent} from './view-process/view.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ViewService],
   bootstrap: [
     AppComponent,
     DeployComponent,
