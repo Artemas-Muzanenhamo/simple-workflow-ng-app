@@ -1,18 +1,19 @@
 export class Task {
 
+  id: string
   name: string;
   assignee: string;
   description: string;
   executionId: string;
   owner: string;
   processInstanceId: string;
-  createTime: Date;
+  createTime: number;
   taskDefinitionKey: string;
   dueDate: string;
   parentTaskId: string;
   tenantId: string;
-  taskLocalVariables: string;
-  processVariables: string;
+  taskLocalVariables: Object;
+  processVariables: Object;
   processDefinitionId: string;
   delegationState: string;
 

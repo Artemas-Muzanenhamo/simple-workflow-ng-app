@@ -4,7 +4,7 @@ import {Task} from '../domain/task';
 @Injectable()
 export class ViewService {
 
-  getProcesses(): Task {
+  getProcesses(): Task[] {
     return [
       {
         'id': '12506',

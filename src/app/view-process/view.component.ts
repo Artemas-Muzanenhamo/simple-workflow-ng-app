@@ -10,7 +10,7 @@ import {Task} from '../domain/task';
 export class ViewComponent implements OnInit {
   constructor(private viewService: ViewService) {}
 
-  task: Task;
+  task: Task[];
 
   ngOnInit(): void {
     this.task = this.viewService.getProcesses();
