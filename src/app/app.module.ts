@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {DeployComponent} from './deploy-process/deploy.component';
-import {StartComponent} from './start-process/start.component';
-import {FindComponent} from './find-process/find.component';
-import {CompleteComponent} from './complete-process/complete.component';
-import {ViewComponent} from './view-process/view.component';
-import {ViewService} from './view-process/view.service';
+import {StartComponent} from './start-task/start.component';
+import {FindComponent} from './find-task/find.component';
+import {CompleteComponent} from './complete-task/complete.component';
+import {ViewComponent} from './view-task/view.component';
+import {ViewService} from './view-task/view.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {ViewService} from './view-process/view.service';
     ViewComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [ViewService],
   bootstrap: [

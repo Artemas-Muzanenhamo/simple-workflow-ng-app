@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ViewService} from './view-process/view.service';
+import {ViewService} from './view-task/view.service';
 
 @Component({
   selector: 'app-root',

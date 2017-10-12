@@ -8,11 +8,19 @@ import {Task} from '../domain/task';
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent implements OnInit {
+
+  errorMessage: string;
+
   constructor(private viewService: ViewService) {}
 
-  task: Task[];
+  tasks: Task[];
 
   ngOnInit(): void {
-    this.task = this.viewService.getProcesses();
+    // this.task = this.viewService.getProcesses();
+    this.viewService.getAllTasks()
+      .subscribe(tasks => {
+          this.tasks = tasks;
+        },
+                  error => this.errorMessage = <any>error);
   }
 }

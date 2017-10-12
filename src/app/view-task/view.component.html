@@ -8,13 +8,13 @@
       <th>Process Definition Id</th>
       <th>Execution Id</th>
     </tr>
-    <tr *ngFor="let task of task">
-      <td>{{task.id}}</td>
-      <td>{{task.name}}</td>
-      <td>{{task.assignee}}</td>
-      <td>{{task.processInstanceId}}</td>
-      <td>{{task.processDefinitionId}}</td>
-      <td>{{task.executionId}}</td>
+    <tr *ngFor="let tasks of tasks">
+      <td>{{tasks.id}}</td>
+      <td>{{tasks.name}}</td>
+      <td>{{tasks.assignee}}</td>
+      <td>{{tasks.processInstanceId}}</td>
+      <td>{{tasks.processDefinitionId}}</td>
+      <td>{{tasks.executionId}}</td>
     </tr>
   </table>
 </div>
