@@ -2,7 +2,10 @@
 
 [![CircleCI](https://circleci.com/gh/Artemas-Muzanenhamo/simple-workflow-ng-app/tree/develop.svg?style=svg)](https://circleci.com/gh/Artemas-Muzanenhamo/simple-workflow-ng-app/tree/develop)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
+## Pre-requisites
+
+* You will need [spring-boot-activiti-demo](https://github.com/Artemas-Muzanenhamo/spring-boot-activiti-demo) running on port 8080. Clink on the link to clone and get it up and running. 
+* You will need [NodeJS](https://nodejs.org/en/download/) installed.
 
 ## Development server
 
