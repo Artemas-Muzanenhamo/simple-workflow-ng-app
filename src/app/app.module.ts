@@ -9,7 +9,7 @@ import {CompleteComponent} from './complete-task/complete.component';
 import {ViewComponent} from './view-task/view.component';
 import {ViewService} from './view-task/view.service';
 import {HttpClientModule} from '@angular/common/http';
-import {StartService} from "./start-task/start.service";
+import {StartService} from './start-task/start.service';
 
 @NgModule({
   declarations: [
