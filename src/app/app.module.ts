@@ -10,6 +10,7 @@ import {ViewComponent} from './view-task/view.component';
 import {ViewService} from './view-task/view.service';
 import {HttpClientModule} from '@angular/common/http';
 import {StartService} from './start-task/start.service';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {StartService} from './start-task/start.service';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     HttpClientModule
   ],
   providers: [ViewService, StartService],

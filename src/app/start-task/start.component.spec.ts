@@ -1,7 +1,7 @@
 import {async, TestBed} from '@angular/core/testing';
 import {StartComponent} from './start.component';
 import {StartService} from './start.service';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
 
 describe('StartProcessComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +9,7 @@ describe('StartProcessComponent', () => {
       declarations: [
         StartComponent
       ],
-      imports: [HttpClientModule],
+      imports: [HttpModule],
       providers: [StartService]
     }).compileComponents();
   }));
