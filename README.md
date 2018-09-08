@@ -1,4 +1,4 @@
-# SimpleWorkflowNgApp
+# Simple Workflow App
 
 [![CircleCI](https://circleci.com/gh/Artemas-Muzanenhamo/simple-workflow-ng-app/tree/develop.svg?style=svg)](https://circleci.com/gh/Artemas-Muzanenhamo/simple-workflow-ng-app/tree/develop)
 
