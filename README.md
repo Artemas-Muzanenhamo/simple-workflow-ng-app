@@ -15,3 +15,6 @@
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+You must also make sure that you are running the `spring-boot-activiti-demo`
+which will be on port `8080` and will allow you to start `Activiti` processes.
