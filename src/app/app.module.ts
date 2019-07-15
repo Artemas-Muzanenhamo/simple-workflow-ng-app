@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {StartService} from './start-task/start.service';
 import {HttpModule} from '@angular/http';
 import {RoutingModule} from './routing/routing.module';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {RoutingModule} from './routing/routing.module';
     StartComponent,
     FindComponent,
     CompleteComponent,
-    ViewComponent
+    ViewComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
