@@ -11,7 +11,8 @@ export class ViewComponent implements OnInit {
 
   errorMessage: string;
 
-  constructor(private viewService: ViewService) {}
+  constructor(private viewService: ViewService) {
+  }
 
   tasks: Task[];
 
@@ -21,6 +22,6 @@ export class ViewComponent implements OnInit {
       .subscribe(tasks => {
           this.tasks = tasks;
         },
-                  error => this.errorMessage = <any>error);
+        error => this.errorMessage = <any>error);
   }
 }

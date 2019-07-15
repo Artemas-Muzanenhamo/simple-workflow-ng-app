@@ -29,10 +29,7 @@ import {HttpModule} from '@angular/http';
   providers: [ViewService, StartService],
   bootstrap: [
     AppComponent,
-    DeployComponent,
     StartComponent,
-    FindComponent,
-    CompleteComponent,
     ViewComponent
   ]
 })
