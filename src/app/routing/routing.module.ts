@@ -14,8 +14,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {useHash: false}),
-    CommonModule,
-    TaskComponent
+    CommonModule
   ],
   exports: [RouterModule],
   declarations: []
