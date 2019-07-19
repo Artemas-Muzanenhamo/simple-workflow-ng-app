@@ -11,8 +11,8 @@ import {ViewService} from './view-task/view.service';
 import {HttpClientModule} from '@angular/common/http';
 import {StartService} from './start-task/start.service';
 import {HttpModule} from '@angular/http';
-import {RoutingModule} from './routing/routing.module';
 import { TaskComponent } from './task/task.component';
+import {RoutingModule} from './routing.module';
 
 @NgModule({
   declarations: [
