@@ -9,7 +9,7 @@
       <th>Execution Id</th>
     </tr>
     <tr *ngFor="let tasks of tasks">
-      <td><a routerLink="['/task']">{{tasks.id}}</a></td>
+      <td><a [routerLink]="['/task']">{{tasks.id}}</a></td>
       <td>{{tasks.name}}</td>
       <td>{{tasks.assignee}}</td>
       <td>{{tasks.processInstanceId}}</td>
