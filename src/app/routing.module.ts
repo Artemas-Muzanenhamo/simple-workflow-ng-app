@@ -5,12 +5,8 @@ import {ViewComponent} from './view-task/view.component';
 import {TaskComponent} from './task/task.component';
 
 const routes: Routes = [
-  {path: '', component: ViewComponent,
-    // children: [
-    //   {path: 'task', component: TaskComponent}
-    // ]
-  },
-  {path: 'task', component: TaskComponent}
+  {path: '', component: ViewComponent},
+  {path: '0/task', component: TaskComponent}
 ];
 
 @NgModule({
@@ -22,4 +18,5 @@ const routes: Routes = [
   declarations: []
 })
 export class RoutingModule {
+//  TODO: Pass Task Id to Routerlink
 }
