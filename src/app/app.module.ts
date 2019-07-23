@@ -33,8 +33,7 @@ import {RoutingModule} from './routing.module';
   providers: [ViewService, StartService],
   bootstrap: [
     AppComponent,
-    StartComponent,
-    ViewComponent
+    StartComponent
   ]
 })
 export class AppModule { }

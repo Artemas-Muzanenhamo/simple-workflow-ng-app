@@ -6,10 +6,11 @@ import {TaskComponent} from './task/task.component';
 
 const routes: Routes = [
   {path: '', component: ViewComponent,
-    children: [
-      {path: 'task', component: TaskComponent}
-    ]
-  }
+    // children: [
+    //   {path: 'task', component: TaskComponent}
+    // ]
+  },
+  {path: 'task', component: TaskComponent}
 ];
 
 @NgModule({
@@ -21,5 +22,4 @@ const routes: Routes = [
   declarations: []
 })
 export class RoutingModule {
-//  TODO: GET ROUTER /task WORKING...
 }
