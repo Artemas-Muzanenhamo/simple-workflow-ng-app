@@ -3,10 +3,16 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {ViewComponent} from './view-task/view.component';
 import {TaskComponent} from './task/task.component';
+import {TaskResolverService} from './task.resolver.service';
 
 const routes: Routes = [
-  {path: '', component: ViewComponent},
-  {path: '0/task', component: TaskComponent}
+  {path: '', component: ViewComponent,
+    children: [
+      {
+        path: ':id/task', component: TaskComponent,
+        resolve: {task: TaskResolverService}
+      }
+    ]}
 ];
 
 @NgModule({
@@ -18,5 +24,5 @@ const routes: Routes = [
   declarations: []
 })
 export class RoutingModule {
-//  TODO: Pass Task Id to Routerlink
+//  TODO: Add resolver to TaskComponent.
 }

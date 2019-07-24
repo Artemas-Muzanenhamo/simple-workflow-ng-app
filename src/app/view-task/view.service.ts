@@ -10,10 +10,16 @@ export class ViewService {
 
   private _allTasksUrl = 'http://localhost:8080/api/process/tasks';
 
-  constructor(private _http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getAllTasks(): Observable<Task[]> {
-    return this._http.get<Task[]>(this._allTasksUrl)
+    return this.http.get<Task[]>(this._allTasksUrl)
+      .do(data => console.log('All: ' + JSON.stringify(data)))
+      .catch(this.handleError);
+  }
+
+  public getTask(id: Number): Observable<Task> {
+    return this.http.get(this._allTasksUrl)
       .do(data => console.log('All: ' + JSON.stringify(data)))
       .catch(this.handleError);
   }
