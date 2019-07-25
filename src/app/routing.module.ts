@@ -7,13 +7,11 @@ import {TaskResolverService} from './task.resolver.service';
 
 const routes: Routes = [
   {
-    path: 'tasks', component: ViewComponent,
-    children: [
-      {
-        path: ':id/task', component: TaskComponent,
-        resolve: {task: TaskResolverService}
-      }
-    ]
+    path: '', component: ViewComponent
+  },
+  {
+    path: ':id/task', component: TaskComponent,
+    resolve: {task: TaskResolverService}
   }
 ];
 
