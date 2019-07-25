@@ -24,5 +24,4 @@ const routes: Routes = [
   declarations: []
 })
 export class RoutingModule {
-//  TODO: Add resolver to TaskComponent.
 }
