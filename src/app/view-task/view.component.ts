@@ -17,7 +17,6 @@ export class ViewComponent implements OnInit {
   tasks: Task[];
 
   ngOnInit(): void {
-    // this.task = this.viewService.getProcesses();
     this.viewService.getAllTasks()
       .subscribe(tasks => {
           this.tasks = tasks;

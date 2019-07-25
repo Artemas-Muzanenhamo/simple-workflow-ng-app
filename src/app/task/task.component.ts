@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Task} from '../domain/task';
 
 @Component({
   selector: 'app-task',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskComponent implements OnInit {
 
-  constructor() { }
+  task: Task;
 
-  ngOnInit() {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
+
+  ngOnInit(): void {
+    this.task = this.route.snapshot.data['task'];
+    console.log(this.task);
   }
 
 }

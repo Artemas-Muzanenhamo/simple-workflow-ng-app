@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {DeployComponent} from './deploy-process/deploy.component';
 import {StartComponent} from './start-task/start.component';
 import {FindComponent} from './find-task/find.component';
@@ -11,8 +11,9 @@ import {ViewService} from './view-task/view.service';
 import {HttpClientModule} from '@angular/common/http';
 import {StartService} from './start-task/start.service';
 import {HttpModule} from '@angular/http';
-import { TaskComponent } from './task/task.component';
+import {TaskComponent} from './task/task.component';
 import {RoutingModule} from './routing.module';
+import {TaskResolverService} from './task.resolver.service';
 
 @NgModule({
   declarations: [
@@ -30,10 +31,15 @@ import {RoutingModule} from './routing.module';
     HttpClientModule,
     RoutingModule
   ],
-  providers: [ViewService, StartService],
+  providers: [
+    ViewService,
+    StartService,
+    TaskResolverService
+  ],
   bootstrap: [
     AppComponent,
     StartComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+}
