@@ -9,7 +9,7 @@ import {Task} from '../domain/task';
 })
 export class TaskComponent implements OnInit {
 
-  task: Task;
+  task: Task[];
 
   constructor(
     private route: ActivatedRoute,
@@ -18,7 +18,6 @@ export class TaskComponent implements OnInit {
 
   ngOnInit(): void {
     this.task = this.route.snapshot.data['task'];
-    console.log(this.task);
   }
 
 }
