@@ -14,6 +14,7 @@ import {HttpModule} from '@angular/http';
 import {TaskComponent} from './task/task.component';
 import {RoutingModule} from './routing.module';
 import {TaskResolverService} from './task.resolver.service';
+import {ActivatedRoute, RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {TaskResolverService} from './task.resolver.service';
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    RoutingModule
+    RoutingModule,
+    RouterModule
   ],
   providers: [
     ViewService,
