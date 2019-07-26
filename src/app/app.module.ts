@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {DeployComponent} from './deploy-process/deploy.component';
 import {StartComponent} from './start-task/start.component';
 import {FindComponent} from './find-task/find.component';
@@ -11,6 +11,10 @@ import {ViewService} from './view-task/view.service';
 import {HttpClientModule} from '@angular/common/http';
 import {StartService} from './start-task/start.service';
 import {HttpModule} from '@angular/http';
+import {TaskComponent} from './task/task.component';
+import {RoutingModule} from './routing.module';
+import {TaskResolverService} from './task.resolver.service';
+import {ActivatedRoute, RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,21 +23,25 @@ import {HttpModule} from '@angular/http';
     StartComponent,
     FindComponent,
     CompleteComponent,
-    ViewComponent
+    ViewComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutingModule,
+    RouterModule
   ],
-  providers: [ViewService, StartService],
+  providers: [
+    ViewService,
+    StartService,
+    TaskResolverService
+  ],
   bootstrap: [
     AppComponent,
-    DeployComponent,
-    StartComponent,
-    FindComponent,
-    CompleteComponent,
-    ViewComponent
+    StartComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+}

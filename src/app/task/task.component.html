@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="display-4">Task - {{task[0].name}} - {{task[0].id}}</h1>
+    <li class="lead"><b>EXECUTION ID: </b> {{task[0].executionId}}</li>
+    <li class="lead"><b>ASSIGNEE: </b>{{task[0].assignee}}</li>
+    <li class="lead"><b>PROCESS DEFINITION ID: </b>{{task[0].processDefinitionId}}</li>
+    <hr class="my-4">
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" routerLink="['']" role="button">{{backButton}}</a>
+    </p>
+  </div>
+</div>
