@@ -10,6 +10,7 @@ import {Task} from '../domain/task';
 export class TaskComponent implements OnInit {
 
   task: Task[];
+  backButton: String = 'BACK';
 
   constructor(
     private route: ActivatedRoute,
