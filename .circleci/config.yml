@@ -6,20 +6,20 @@ jobs:
       - image: circleci/node:11-browsers
     steps:
       - checkout
-      - run:
-          name: install-dependencies
-          command: yarn install
-      - save_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-            - ./node_modules
-      - run:
-          name: angular-build
-          command: yarn ng -- build --prod --aot --no-progress
-      - run:
-          name: angular-test
-          command: yarn test --no-progress --watch
-      - run:
-          name: angular-lint
-          command: yarn lint
+        # Install project dependencies
+          - run:
+          name: Install local dependencies
+          command: npm install
+        # Cache local dependencies if they don't exist
+          - save_cache:
+              key: v1-dependencies-{{ checksum "package.json" }}
+              paths:
+                - node_modules
+        # Lint the source code
+          - run:
+              name: Linting
+              command: npm run lint
+        # Test the source code
+          - run:
+              name: Testing
+              command: npm run -- ng test --watch false
