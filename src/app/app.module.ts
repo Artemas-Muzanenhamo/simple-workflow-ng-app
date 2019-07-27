@@ -10,11 +10,10 @@ import {ViewComponent} from './view-task/view.component';
 import {ViewService} from './view-task/view.service';
 import {HttpClientModule} from '@angular/common/http';
 import {StartService} from './start-task/start.service';
-import {HttpModule} from '@angular/http';
 import {TaskComponent} from './task/task.component';
 import {RoutingModule} from './routing.module';
 import {TaskResolverService} from './task.resolver.service';
-import {ActivatedRoute, RouterModule} from '@angular/router';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import {ActivatedRoute, RouterModule} from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     HttpClientModule,
     RoutingModule,
     RouterModule

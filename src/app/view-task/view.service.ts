@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {Task} from '../domain/task';
-import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable()
 export class ViewService {
@@ -20,9 +20,7 @@ export class ViewService {
   };
 
   getAllTasks(): Observable<Task[]> {
-    return this.http.get<Task[]>(this._allTasksUrl)
-      .do(data => console.log('All: ' + JSON.stringify(data)))
-      .catch(this.handleError);
+    return this.http.get<Task[]>(this._allTasksUrl);
   }
 
   public getTask(id: Number): Observable<Task> {
@@ -31,13 +29,6 @@ export class ViewService {
       taskId: id
     };
 
-    return this.http.post(this.taskByIdUrl, taskIdentifier, this.httpOptions)
-      .do(data => JSON.stringify(data))
-      .catch(this.handleError);
-  }
-
-  private handleError(err: HttpErrorResponse) {
-    console.log(err.message);
-    return Observable.throw(err.message);
+    return this.http.post<Task>(this.taskByIdUrl, taskIdentifier, this.httpOptions);
   }
 }
