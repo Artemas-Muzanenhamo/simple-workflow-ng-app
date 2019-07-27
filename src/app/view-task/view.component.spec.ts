@@ -3,6 +3,8 @@ import {ViewComponent} from './view.component';
 import {ViewService} from './view.service';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe( 'ViewComponent', () => {
   beforeEach(async(() => {
@@ -12,9 +14,13 @@ describe( 'ViewComponent', () => {
       ],
       imports: [
         BrowserModule,
-        HttpClientModule
+        HttpClientModule,
+        RouterTestingModule
       ],
-      providers: [ViewService]
+      providers: [ViewService],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     }).compileComponents();
   }));
   it('should show a table with 6 rows', async( () => {

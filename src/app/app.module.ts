@@ -11,9 +11,9 @@ import {ViewService} from './view-task/view.service';
 import {HttpClientModule} from '@angular/common/http';
 import {StartService} from './start-task/start.service';
 import {TaskComponent} from './task/task.component';
-import {RoutingModule} from './routing.module';
 import {TaskResolverService} from './task.resolver.service';
 import {RouterModule} from '@angular/router';
+import {RoutingModule} from './routing.module';
 
 @NgModule({
   declarations: [
@@ -28,8 +28,8 @@ import {RouterModule} from '@angular/router';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RoutingModule,
-    RouterModule
+    RouterModule,
+    RoutingModule
   ],
   providers: [
     ViewService,
