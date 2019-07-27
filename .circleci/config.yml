@@ -1,25 +1,63 @@
+#version: 2
+#jobs:
+#  build:
+#    working_directory: ~/app-name
+#    docker:
+#      - image: circleci/node:11-browsers
+#    steps:
+#      - checkout
+#      - run:
+#          name: install-dependencies
+#          command: yarn install
+#      - save_cache:
+#          key: dependency-cache-{{ checksum "yarn.lock" }}
+#          paths:
+#            - ~/.cache/yarn
+#            - ./node_modules
+#      - run:
+#          name: angular-build
+#          command: yarn ng -- build --prod --aot --no-progress
+#      - run:
+#          name: angular-test
+#          command: yarn test --no-progress --watch
+#      - run:
+#          name: angular-lint
+#          command: yarn lint
+
 version: 2
+
 jobs:
+  # The build job
   build:
     working_directory: ~/app-name
     docker:
       - image: circleci/node:11-browsers
     steps:
-      - checkout
-    # Install project dependencies
+      # Checkout the code from the branch into the working_directory
+      - checkout:
+      # Log the current branch
       - run:
-        name: Install local dependencies
-        command: npm install
-    # Cache local dependencies if they don't exist
+          name: Show current branch
+          command: echo ${CIRCLE_BRANCH}
+      # Restore local dependencies from cache
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      # Install project dependencies
+      - run:
+          name: Install local dependencies
+          command: npm install
+      # Cache local dependencies if they don't exist
       - save_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
           paths:
             - node_modules
-    # Lint the source code
+      # Lint the source code
       - run:
           name: Linting
           command: npm run lint
-    # Test the source code
+      # Test the source code
       - run:
           name: Testing
           command: npm run -- ng test --watch false
