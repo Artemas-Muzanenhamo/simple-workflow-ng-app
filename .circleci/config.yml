@@ -19,7 +19,7 @@ jobs:
           command: yarn ng -- build --prod --aot --no-progress
       - run:
           name: angular-test
-          command: yarn test -- --single-run --no-progress
+          command: yarn test --no-progress
       - run:
           name: angular-lint
           command: yarn lint
