@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div id="task-view" class="container-fluid">
   <div class="jumbotron">
     <h1 class="display-4">Task - {{task[0].name}} - {{task[0].id}}</h1>
     <li class="lead"><b>EXECUTION ID: </b> {{task[0].executionId}}</li>
@@ -7,19 +7,24 @@
     <hr class="my-4">
     <p class="lead">
       <a class="btn btn-primary btn-lg" [routerLink]="['']" role="button">{{backButton}}</a>
+      <button type="button" class="btn btn-default btn-lg">
+        <i class="fa fa-align-left"></i>
+      </button>
     </p>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-3">
-    <button id="find-process" class="btn btn-primary btn-group-justified">Find Process</button>
-  </div>
-  <div class="col-sm-3">
-    <button id="deploy-process" class="btn btn-danger btn-group-justified">Deploy Process</button>
-  </div>
-  <div class="col-sm-3">
-    <button id="complete-process" class="btn btn-success btn-group-justified">Complete Process</button>
-  </div>
+<div class="text-center">
+  <div class="row">
+    <div class="col-sm-4">
+      <button id="find-process" class="btn btn-primary btn-group-justified">Find Process</button>
+    </div>
+    <div class="col-sm-4">
+      <button id="deploy-process" class="btn btn-danger btn-group-justified">Deploy Process</button>
+    </div>
+    <div class="col-sm-4">
+      <button id="complete-process" class="btn btn-success btn-group-justified">Complete Process</button>
+    </div>
 
+  </div>
 </div>
 
