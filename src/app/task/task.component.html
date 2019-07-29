@@ -5,26 +5,24 @@
     <li class="lead"><b>ASSIGNEE: </b>{{task[0].assignee}}</li>
     <li class="lead"><b>PROCESS DEFINITION ID: </b>{{task[0].processDefinitionId}}</li>
     <hr class="my-4">
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" [routerLink]="['']" role="button">{{backButton}}</a>
-      <button type="button" class="btn btn-default btn-lg">
-        <i class="fa fa-align-left"></i>
-      </button>
-    </p>
+    <div class="lead row">
+      <div class="col-sm-4">
+        <a class="btn btn-primary" [routerLink]="['']" role="button">
+          <i class="fa fa-backward"></i> {{backButton}}
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <button id="deploy-process" class="btn btn-danger">Deploy Process</button>
+      </div>
+      <div class="col-sm-4">
+        <button id="complete-process" class="btn btn-success">Complete Process</button>
+      </div>
+    </div>
   </div>
 </div>
 <div class="text-center">
-  <div class="row">
-    <div class="col-sm-4">
-      <button id="find-process" class="btn btn-primary btn-group-justified">Find Process</button>
-    </div>
-    <div class="col-sm-4">
-      <button id="deploy-process" class="btn btn-danger btn-group-justified">Deploy Process</button>
-    </div>
-    <div class="col-sm-4">
-      <button id="complete-process" class="btn btn-success btn-group-justified">Complete Process</button>
-    </div>
+  <button type="button" class="btn btn-default btn-lg">
 
-  </div>
+  </button>
 </div>
 
