@@ -1,14 +1,14 @@
 <div id="task-view" class="container-fluid">
-  <div class="jumbotron">
+  <div class="jumbotron text-center">
     <h1 class="display-4">Task - {{task[0].name}} - {{task[0].id}}</h1>
     <li class="lead"><b>EXECUTION ID: </b> {{task[0].executionId}}</li>
     <li class="lead"><b>ASSIGNEE: </b>{{task[0].assignee}}</li>
     <li class="lead"><b>PROCESS DEFINITION ID: </b>{{task[0].processDefinitionId}}</li>
     <hr class="my-4">
-    <div class="lead row">
+    <div class="lead row text-center">
       <div class="col-sm-4">
         <a class="btn btn-primary" [routerLink]="['']" role="button">
-          <i class="fa fa-backward"></i> {{backButton}}
+          <i class="fa fa-arrow-circle-left"></i> {{backButton}}
         </a>
       </div>
       <div class="col-sm-4">
