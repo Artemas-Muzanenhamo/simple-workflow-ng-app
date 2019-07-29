@@ -11,7 +11,7 @@ export class ViewService {
   private _allTasksUrl = 'http://localhost:8080/api/process/tasks';
   private taskByIdUrl = 'http://localhost:8080/api/process/task';
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -20,7 +20,7 @@ export class ViewService {
   };
 
   getAllTasks(): Observable<Task[]> {
-    return this.http.get<Task[]>(this._allTasksUrl);
+    return this.httpClient.get<Task[]>(this._allTasksUrl);
   }
 
   public getTask(id: Number): Observable<Task> {
@@ -29,6 +29,6 @@ export class ViewService {
       taskId: id
     };
 
-    return this.http.post<Task>(this.taskByIdUrl, taskIdentifier, this.httpOptions);
+    return this.httpClient.post<Task>(this.taskByIdUrl, taskIdentifier, this.httpOptions);
   }
 }

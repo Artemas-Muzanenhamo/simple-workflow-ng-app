@@ -5,7 +5,6 @@ import {AppComponent} from './app.component';
 import {DeployComponent} from './deploy-process/deploy.component';
 import {StartComponent} from './start-task/start.component';
 import {FindComponent} from './find-task/find.component';
-import {CompleteComponent} from './complete-task/complete.component';
 import {ViewComponent} from './view-task/view.component';
 import {ViewService} from './view-task/view.service';
 import {HttpClientModule} from '@angular/common/http';
@@ -14,6 +13,7 @@ import {TaskComponent} from './task/task.component';
 import {TaskResolverService} from './task.resolver.service';
 import {RouterModule} from '@angular/router';
 import {RoutingModule} from './routing.module';
+import {TaskService} from './task/task.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,6 @@ import {RoutingModule} from './routing.module';
     DeployComponent,
     StartComponent,
     FindComponent,
-    CompleteComponent,
     ViewComponent,
     TaskComponent
   ],
@@ -34,7 +33,8 @@ import {RoutingModule} from './routing.module';
   providers: [
     ViewService,
     StartService,
-    TaskResolverService
+    TaskResolverService,
+    TaskService
   ],
   bootstrap: [
     AppComponent,
