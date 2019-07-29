@@ -1,20 +1,22 @@
-<div id="task-view" class="container-fluid align-middle">
-  <table class="table table-bordered table-hover table-responsive">
-    <tr class="danger">
-      <th>Task Id</th>
-      <th>Name</th>
-      <th>Assignee</th>
-      <th>Process Instance Id</th>
-      <th>Process Definition Id</th>
-      <th>Execution Id</th>
-    </tr>
-    <tr *ngFor="let tasks of tasks">
-      <td><a [routerLink]="[tasks.id, 'task']">{{tasks.id}}</a></td>
-      <td>{{tasks.name}}</td>
-      <td>{{tasks.assignee}}</td>
-      <td>{{tasks.processInstanceId}}</td>
-      <td>{{tasks.processDefinitionId}}</td>
-      <td>{{tasks.executionId}}</td>
-    </tr>
-  </table>
+<div class="container-fluid">
+  <div id="task-view" class="">
+    <table class="table table-bordered table-hover table-responsive">
+      <tr class="danger">
+        <th>Task Id</th>
+        <th>Name</th>
+        <th>Assignee</th>
+        <th>Process Instance Id</th>
+        <th>Process Definition Id</th>
+        <th>Execution Id</th>
+      </tr>
+      <tr *ngFor="let tasks of tasks">
+        <td><a [routerLink]="[tasks.id, 'task']">{{tasks.id}}</a></td>
+        <td>{{tasks.name}}</td>
+        <td>{{tasks.assignee}}</td>
+        <td>{{tasks.processInstanceId}}</td>
+        <td>{{tasks.processDefinitionId}}</td>
+        <td>{{tasks.executionId}}</td>
+      </tr>
+    </table>
+  </div>
 </div>
