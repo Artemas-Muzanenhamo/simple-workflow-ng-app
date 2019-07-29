@@ -1,22 +1,19 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs/Rx';
+import {Task} from '../domain/task';
 
 @Injectable()
 export class StartService {
 
-  private _startTaskUrl = 'http://localhost:8080/api/process/start-task';
+  private startTaskUrl = 'http://localhost:8080/api/process/start-task';
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  startProcess() {
+  startProcess(): Observable<Task> {
     const body = {'processInstanceKey': 'my-process'};
     console.log('BODY: ' + JSON.stringify(body));
-    this.http.post(this._startTaskUrl, body)
-      .subscribe(
-        res => {
-          console.log(res);
-        }
-      );
+    return this.httpClient.post<Task>(this.startTaskUrl, body);
   }
 
 }

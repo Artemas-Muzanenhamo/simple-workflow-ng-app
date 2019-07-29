@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {StartService} from './start.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-start-process',
@@ -8,10 +9,18 @@ import {StartService} from './start.service';
 })
 export class StartComponent {
 
-  constructor(private startService: StartService) {}
+  constructor(
+    private startService: StartService,
+    private router: Router,
+  ) {}
 
-  save() {
-    this.startService.startProcess();
+  save(): void {
+    this.startService.startProcess()
+      .subscribe(
+        onComplete => {
+          return this.router.navigate(['']);
+        }
+      );
   }
 
 }
