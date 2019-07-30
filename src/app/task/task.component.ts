@@ -10,7 +10,7 @@ import {TaskService} from './task.service';
 })
 export class TaskComponent implements OnInit {
 
-  task: Task[];
+  task: Task;
   backButton: String = 'BACK';
 
   constructor(
@@ -24,7 +24,7 @@ export class TaskComponent implements OnInit {
   }
 
   public completeTask(): void {
-    const taskId = Number(this.task[0].id);
+    const taskId = Number(this.task.id);
     this.taskService.completeTask(taskId)
       .subscribe(
         data => {
