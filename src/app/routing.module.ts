@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: '', component: ViewComponent
   },
+  {path: 'home', component: ViewComponent},
   {
     path: ':id/task', component: TaskComponent,
     resolve: {task: TaskResolverService}
