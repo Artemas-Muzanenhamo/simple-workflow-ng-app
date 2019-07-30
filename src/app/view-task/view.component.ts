@@ -10,8 +10,6 @@ import {Task} from '../domain/task';
 })
 export class ViewComponent implements OnInit {
 
-  errorMessage: string;
-
   constructor(private viewService: ViewService) {
   }
 
