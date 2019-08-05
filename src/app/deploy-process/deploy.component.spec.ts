@@ -9,9 +9,4 @@ describe('DeployComponent', () => {
       ],
     }).compileComponents();
   }));
-  it('should show a button to deploy a process', async(() => {
-    const fixture = TestBed.createComponent(DeployComponent);
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('button#deploy-process').textContent).toContain('Deploy Process');
-  }));
 });

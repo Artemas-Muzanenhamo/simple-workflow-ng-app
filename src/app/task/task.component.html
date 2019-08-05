@@ -12,7 +12,7 @@
         </a>
       </div>
       <div class="col-sm-4">
-        <button id="deploy-process" class="btn btn-danger">Deploy Process</button>
+        <button id="deploy-process" class="btn btn-danger" [routerLink]="['/deploy']">Deploy Process</button>
       </div>
       <div class="col-sm-4">
         <button id="complete-process" (click)="completeTask()" class="btn btn-success">Complete Process</button>

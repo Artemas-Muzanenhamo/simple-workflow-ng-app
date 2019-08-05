@@ -4,6 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {ViewComponent} from './view-task/view.component';
 import {TaskComponent} from './task/task.component';
 import {TaskResolverService} from './task.resolver.service';
+import {DeployComponent} from './deploy-process/deploy.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
     path: ':id/task', component: TaskComponent,
     resolve: {task: TaskResolverService}
   }
+  ,{path: 'deploy', component: DeployComponent}
 ];
 
 @NgModule({
