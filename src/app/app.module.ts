@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {DeployComponent} from './deploy-process/deploy.component';
@@ -11,9 +11,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {StartService} from './start-task/start.service';
 import {TaskComponent} from './task/task.component';
 import {TaskResolverService} from './task.resolver.service';
-import {RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {RoutingModule} from './routing.module';
 import {TaskService} from './task/task.service';
+import {HomeComponent} from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {TaskService} from './task/task.service';
     StartComponent,
     FindComponent,
     ViewComponent,
-    TaskComponent
+    TaskComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,10 @@ import {TaskService} from './task/task.service';
   bootstrap: [
     AppComponent,
     StartComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ]
 })
 export class AppModule {

@@ -5,9 +5,14 @@ import {ViewComponent} from './view-task/view.component';
 import {TaskComponent} from './task/task.component';
 import {TaskResolverService} from './task.resolver.service';
 import {DeployComponent} from './deploy-process/deploy.component';
+import {AppComponent} from './app.component';
 
 const routes: Routes = [
-  {path: '', component: ViewComponent},
+  {path: '', component: AppComponent,
+    children: [
+      {path: '', component: ViewComponent}
+    ]
+  },
   {
     path: ':id/task', component: TaskComponent,
     children: [
