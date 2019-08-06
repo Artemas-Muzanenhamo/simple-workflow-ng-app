@@ -7,15 +7,14 @@ import {TaskResolverService} from './task.resolver.service';
 import {DeployComponent} from './deploy-process/deploy.component';
 
 const routes: Routes = [
-  {
-    path: '', component: ViewComponent
-  },
-  {path: 'home', component: ViewComponent},
+  {path: '', component: ViewComponent},
   {
     path: ':id/task', component: TaskComponent,
-    resolve: {task: TaskResolverService}
+    resolve: {task: TaskResolverService},
+    children: [
+      {path: 'deploy', component: DeployComponent}
+    ]
   }
-  ,{path: 'deploy', component: DeployComponent}
 ];
 
 @NgModule({
