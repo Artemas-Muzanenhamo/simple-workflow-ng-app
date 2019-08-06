@@ -10,10 +10,10 @@ const routes: Routes = [
   {path: '', component: ViewComponent},
   {
     path: ':id/task', component: TaskComponent,
-    resolve: {task: TaskResolverService},
     children: [
       {path: 'deploy', component: DeployComponent}
-    ]
+    ],
+    resolve: {task: TaskResolverService}
   }
 ];
 
