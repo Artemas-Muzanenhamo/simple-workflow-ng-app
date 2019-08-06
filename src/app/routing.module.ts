@@ -10,10 +10,10 @@ const routes: Routes = [
   {path: '', component: ViewComponent},
   {
     path: ':id/task', component: TaskComponent,
-    resolve: {task: TaskResolverService},
     children: [
       {path: 'deploy', component: DeployComponent}
-    ]
+    ],
+    resolve: {task: TaskResolverService}
   }
 ];
 
@@ -25,5 +25,4 @@ const routes: Routes = [
   exports: [RouterModule],
   declarations: []
 })
-export class RoutingModule {
-}
+export class RoutingModule { }
