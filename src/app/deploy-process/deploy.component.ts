@@ -11,7 +11,6 @@ export class DeployComponent implements OnInit {
 
   task: Task;
 
-
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -19,5 +18,9 @@ export class DeployComponent implements OnInit {
 
   ngOnInit(): void {
     this.task = this.route.snapshot.data['task'];
+    this.route.parent.data
+      .subscribe((data) => {
+        this.task = data.task;
+      });
   }
 }
