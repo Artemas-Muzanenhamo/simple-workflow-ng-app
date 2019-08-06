@@ -8,5 +8,4 @@ import {ViewService} from './view-task/view.service';
   providers: [ViewService]
 })
 export class AppComponent {
-  title = 'Workflow App';
 }
