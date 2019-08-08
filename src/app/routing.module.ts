@@ -13,17 +13,17 @@ const routes: Routes = [
     children: [
       {path: '', component: HomeComponent,
       children: [
-        {path: '', component: ViewComponent}
+        {path: '', component: ViewComponent},
+        {
+          path: ':id/task', component: TaskComponent,
+          children: [
+            {path: 'deploy', component: DeployComponent}
+          ],
+          resolve: {task: TaskResolverService}
+        }
       ]}
     ]
   },
-  {
-    path: ':id/task', component: TaskComponent,
-    children: [
-      {path: 'deploy', component: DeployComponent}
-    ],
-    resolve: {task: TaskResolverService}
-  }
 ];
 
 @NgModule({
