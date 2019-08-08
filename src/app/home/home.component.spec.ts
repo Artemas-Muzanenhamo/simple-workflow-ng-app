@@ -15,6 +15,7 @@ describe('HomeComponent', () => {
         RouterTestingModule
       ],
       imports: [
+        RouterTestingModule
       ],
       schemas: [
         CUSTOM_ELEMENTS_SCHEMA
