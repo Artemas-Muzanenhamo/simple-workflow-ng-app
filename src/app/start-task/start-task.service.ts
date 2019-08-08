@@ -4,7 +4,7 @@ import {Observable} from 'rxjs/Rx';
 import {Task} from '../domain/task';
 
 @Injectable()
-export class StartService {
+export class StartTaskService {
 
   private startTaskUrl = 'http://localhost:8080/api/process/start-task';
 

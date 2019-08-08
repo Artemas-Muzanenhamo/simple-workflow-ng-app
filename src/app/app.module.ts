@@ -3,12 +3,12 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA} from '@angular/core'
 
 import {AppComponent} from './app.component';
 import {DeployComponent} from './deploy-process/deploy.component';
-import {StartComponent} from './start-task/start.component';
+import {StartTaskComponent} from './start-task/start-task.component';
 import {FindComponent} from './find-task/find.component';
 import {ViewComponent} from './view-task/view.component';
 import {ViewService} from './view-task/view.service';
 import {HttpClientModule} from '@angular/common/http';
-import {StartService} from './start-task/start.service';
+import {StartTaskService} from './start-task/start-task.service';
 import {TaskComponent} from './task/task.component';
 import {TaskResolverService} from './task.resolver.service';
 import {RouterModule, Routes} from '@angular/router';
@@ -20,7 +20,7 @@ import {HomeComponent} from './home/home.component';
   declarations: [
     AppComponent,
     DeployComponent,
-    StartComponent,
+    StartTaskComponent,
     FindComponent,
     ViewComponent,
     TaskComponent,
@@ -34,7 +34,7 @@ import {HomeComponent} from './home/home.component';
   ],
   providers: [
     ViewService,
-    StartService,
+    StartTaskService,
     TaskResolverService,
     TaskService
   ],
