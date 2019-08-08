@@ -1,16 +1,16 @@
 import {Component, OnInit} from '@angular/core';
-import {StartService} from './start.service';
+import {StartTaskService} from './start-task.service';
 import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-start-process',
-  templateUrl: './start.component.html',
-  styleUrls: ['./start.component.css']
+  templateUrl: './start-task.component.html',
+  styleUrls: ['./start-task.component.css']
 })
-export class StartComponent implements OnInit {
+export class StartTaskComponent implements OnInit {
 
   constructor(
-    private startService: StartService,
+    private startService: StartTaskService,
     private router: Router,
   ) {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
