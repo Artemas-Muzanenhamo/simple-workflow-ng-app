@@ -39,8 +39,7 @@ import {HomeComponent} from './home/home.component';
     TaskService
   ],
   bootstrap: [
-    AppComponent,
-    StartComponent
+    AppComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
