@@ -15,7 +15,7 @@ export class DeploymentService {
     })
   };
 
-  getAllTasks(): Observable<Deployment[]> {
+  getAllDeployments(): Observable<Deployment[]> {
     return this.httpClient.get<Deployment[]>(this.allDeploymentsURL);
   }
 

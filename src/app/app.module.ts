@@ -11,11 +11,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {StartTaskService} from './start-task/start-task.service';
 import {TaskComponent} from './task/task.component';
 import {TaskResolverService} from './task.resolver.service';
-import {RouterModule, Routes} from '@angular/router';
+import {RouterModule} from '@angular/router';
 import {RoutingModule} from './routing.module';
 import {TaskService} from './task/task.service';
 import {HomeComponent} from './home/home.component';
 import {DeploymentComponent} from './deployment/deployment.component';
+import {DeploymentService} from './deployment/deployment.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {DeploymentComponent} from './deployment/deployment.component';
     ViewService,
     StartTaskService,
     TaskResolverService,
-    TaskService
+    TaskService,
+    DeploymentService
   ],
   bootstrap: [
     AppComponent
