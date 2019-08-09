@@ -7,6 +7,7 @@ import {DeployComponent} from './deploy-process/deploy.component';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {ViewComponent} from './view-task/view.component';
+import {DeploymentComponent} from './deployment/deployment.component';
 
 const routes: Routes = [
   {path: '', component: AppComponent,
@@ -20,7 +21,8 @@ const routes: Routes = [
             {path: 'deploy', component: DeployComponent}
           ],
           resolve: {task: TaskResolverService}
-        }
+        },
+        {path: 'deployed', component: DeploymentComponent}
       ]}
     ]
   },

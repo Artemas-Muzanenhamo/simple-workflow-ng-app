@@ -15,6 +15,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {RoutingModule} from './routing.module';
 import {TaskService} from './task/task.service';
 import {HomeComponent} from './home/home.component';
+import {DeploymentComponent} from './deployment/deployment.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {HomeComponent} from './home/home.component';
     FindComponent,
     ViewComponent,
     TaskComponent,
-    HomeComponent
+    HomeComponent,
+    DeploymentComponent
   ],
   imports: [
     BrowserModule,
