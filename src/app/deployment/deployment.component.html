@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div id="task-view" class="">
+    <table class="table table-bordered table-hover table-responsive-sm">
+      <tr class="danger">
+        <th>Task Id</th>
+        <th>Name</th>
+        <th>Assignee</th>
+        <th>Process Instance Id</th>
+        <th>Process Definition Id</th>
+        <th>Execution Id</th>
+      </tr>
+      <tr *ngFor="let deployement of deployments">
+        <td>{{deployement.getId}}</td>
+        <td>{{deployement.getName}}</td>
+        <td>{{deployement.getDeploymentTime}}</td>
+        <td>{{deployement.getKey}}</td>
+        <td>{{deployement.getCategory}}</td>
+        <td>{{deployement.getTenantId}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
