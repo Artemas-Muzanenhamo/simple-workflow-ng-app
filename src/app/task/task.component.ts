@@ -12,6 +12,8 @@ export class TaskComponent implements OnInit {
 
   task: Task;
   backButton: String = 'BACK';
+  deployProcessLabel = 'DEPLOY PROCESS';
+  completeProcessLabel = 'COMPLETE PROCESS';
 
   constructor(
     private route: ActivatedRoute,

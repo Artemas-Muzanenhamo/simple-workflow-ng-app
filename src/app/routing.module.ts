@@ -17,12 +17,10 @@ const routes: Routes = [
         {path: '', component: ViewComponent},
         {
           path: ':id/task', component: TaskComponent,
-          children: [
-            {path: 'deploy', component: DeployComponent}
-          ],
           resolve: {task: TaskResolverService}
         },
-        {path: 'deployed', component: DeploymentComponent}
+        {path: 'deployed', component: DeploymentComponent},
+        {path: 'deploy', component: DeployComponent}
       ]}
     ]
   },

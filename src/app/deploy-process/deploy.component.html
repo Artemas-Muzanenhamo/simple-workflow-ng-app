@@ -1,3 +1,14 @@
-<p>
-  <b>DEPLOYED: {{task.name}} - {{task.id}}</b>
-</p>
+<div class="container text-center">
+  <h1>{{title}}</h1>
+  <form id="deploy-process" (submit)="onSubmit()" #deployProcessForm="ngForm">
+    <fieldset>
+      <div class="uk-margin">
+        <label class="">PROCESS NAME:</label>
+        <input [(ngModel)]="process.processName" id="deploy-process-input" type="text" placeholder="Process Name" name="deploy-process-input" required>
+      </div>
+      <div class="btn-group">
+        <button type="submit" value="submit" class="btn btn-primary btn-group-justified" [disabled]="!deployProcessForm.form.valid">DEPLOY PROCESS</button>
+      </div>
+    </fieldset>
+  </form>
+</div>

@@ -12,10 +12,10 @@
         </a>
       </div>
       <div class="col-sm-4">
-        <button id="deploy-process" class="btn btn-danger" [routerLink]="['deploy']">Deploy Process</button>
+        <button id="deploy-process" class="btn btn-danger" [routerLink]="['deploy']">{{deployProcessLabel}}</button>
       </div>
       <div class="col-sm-4">
-        <button id="complete-process" class="btn btn-success" (click)="completeTask()">Complete Process</button>
+        <button id="complete-process" class="btn btn-success" (click)="completeTask()">{{completeProcessLabel}}</button>
       </div>
     </div>
     <div>
