@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Task} from 'app/domain/task';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Process} from '../domain/process';
 
 @Component({
   selector: 'app-deploy',
@@ -10,7 +11,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class DeployComponent implements OnInit {
 
   task: Task;
-  title: string = 'DEPLOY PROCESS';
+  title = 'DEPLOY PROCESS';
+  process: Process = new Process();
 
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +28,6 @@ export class DeployComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log('Submit clicked!');
+    console.log('Process Name is: ' + this.process.processName);
   }
 }

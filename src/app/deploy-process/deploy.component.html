@@ -4,7 +4,7 @@
     <fieldset>
       <div class="uk-margin">
         <label class="">PROCESS NAME:</label>
-        <input id="deploy-process-input" type="text" placeholder="Process Name" name="deploy-process-input" required>
+        <input [(ngModel)]="process.processName" id="deploy-process-input" type="text" placeholder="Process Name" name="deploy-process-input" required>
       </div>
       <div class="btn-group">
         <button type="submit" value="submit" class="btn btn-primary btn-group-justified" [disabled]="!deployProcessForm.form.valid">DEPLOY PROCESS</button>
