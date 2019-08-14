@@ -10,6 +10,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class DeployComponent implements OnInit {
 
   task: Task;
+  title: string = 'DEPLOY PROCESS';
 
   constructor(
     private route: ActivatedRoute,

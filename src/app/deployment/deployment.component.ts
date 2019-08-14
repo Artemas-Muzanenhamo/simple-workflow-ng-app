@@ -17,7 +17,6 @@ export class DeploymentComponent implements OnInit {
     this.deploymentService.getAllDeployments()
       .subscribe(
         data => {
-          console.log(data);
           this.deployments = data;
         }
       );
