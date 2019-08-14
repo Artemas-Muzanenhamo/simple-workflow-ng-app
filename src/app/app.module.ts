@@ -18,6 +18,7 @@ import {HomeComponent} from './home/home.component';
 import {DeploymentComponent} from './deployment/deployment.component';
 import {DeploymentService} from './deployment/deployment.service';
 import {FormsModule} from '@angular/forms';
+import {DeployService} from './deploy-process/deploy.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {FormsModule} from '@angular/forms';
     StartTaskService,
     TaskResolverService,
     TaskService,
-    DeploymentService
+    DeploymentService,
+    DeployService
   ],
   bootstrap: [
     AppComponent
