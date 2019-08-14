@@ -24,4 +24,8 @@ export class DeployComponent implements OnInit {
         (data) => this.task = data.task
       );
   }
+
+  public onSubmit() {
+    console.log('Submit clicked!');
+  }
 }

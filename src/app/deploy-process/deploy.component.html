@@ -1,13 +1,13 @@
-<div>
+<div class="container text-center">
   <h1>{{title}}</h1>
-  <form id="deploy-process">
+  <form id="deploy-process" (submit)="onSubmit()">
     <fieldset>
       <div class="uk-margin">
-        <label>PROCESS NAME</label>
-        <input id="deploy-process-input"  type="text" placeholder="Process Name" name="deploy-process-input" required>
+        <label class="">PROCESS NAME:</label>
+        <input id="deploy-process-input" type="text" placeholder="Process Name" name="deploy-process-input" required>
       </div>
       <div class="btn-group">
-        <button class="btn-danger">DEPLOY PROCESS</button>
+        <button class="btn btn-primary btn-group-justified">DEPLOY PROCESS</button>
       </div>
     </fieldset>
   </form>

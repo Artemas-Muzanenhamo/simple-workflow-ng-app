@@ -9,6 +9,9 @@ import {Router} from '@angular/router';
 })
 export class StartTaskComponent implements OnInit {
 
+  startProcessLabel: string = 'START PROCESS';
+  findProcessLabel: string = 'FIND PROCESS';
+
   constructor(
     private startService: StartTaskService,
     private router: Router,
