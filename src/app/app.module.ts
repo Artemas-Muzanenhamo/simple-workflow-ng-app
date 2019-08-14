@@ -17,6 +17,7 @@ import {TaskService} from './task/task.service';
 import {HomeComponent} from './home/home.component';
 import {DeploymentComponent} from './deployment/deployment.component';
 import {DeploymentService} from './deployment/deployment.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {DeploymentService} from './deployment/deployment.service';
     BrowserModule,
     HttpClientModule,
     RouterModule,
-    RoutingModule
+    RoutingModule,
+    FormsModule
   ],
   providers: [
     ViewService,
