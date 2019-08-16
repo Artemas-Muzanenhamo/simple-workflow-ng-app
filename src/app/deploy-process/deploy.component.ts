@@ -12,7 +12,7 @@ import {DeployService} from './deploy.service';
 export class DeployComponent implements OnInit {
 
   task: Task;
-  title = 'DEPLOY PROCESS';
+  title = 'Deploy Process';
   process: Process = new Process();
 
   constructor(

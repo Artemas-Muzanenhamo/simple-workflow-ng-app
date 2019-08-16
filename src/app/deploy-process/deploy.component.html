@@ -1,14 +1,14 @@
 <div class="container text-center">
   <h1>{{title}}</h1>
-  <form id="deploy-process" (submit)="onSubmit()" #deployProcessForm="ngForm">
-    <fieldset>
-      <div class="uk-margin">
-        <label class="">PROCESS NAME:</label>
-        <input [(ngModel)]="process.processName" id="deploy-process-input" type="text" placeholder="Process Name" name="deploy-process-input" required>
-      </div>
-      <div class="btn-group">
-        <button type="submit" value="submit" class="btn btn-primary btn-group-justified" [disabled]="!deployProcessForm.form.valid">DEPLOY PROCESS</button>
-      </div>
-    </fieldset>
+  <form id="deploy-proces-form" class="form-inline justify-content-center" (submit)="onSubmit()" #deployProcessForm="ngForm">
+    <div class="form-group mb-2">
+      <label id="process-name-label" for="deploy-process-input">PROCESS NAME:</label>
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+      <input [(ngModel)]="process.processName" id="deploy-process-input" class="form-control" type="text" placeholder="Process Name" name="deploy-process-input" required>
+    </div>
+    <div class="btn-group form-group mx-sm-3 mb-2">
+      <button type="submit" value="submit" class="btn btn-primary btn-group-justified" [disabled]="!deployProcessForm.form.valid">DEPLOY PROCESS</button>
+    </div>
   </form>
 </div>
