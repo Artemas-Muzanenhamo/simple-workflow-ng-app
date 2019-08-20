@@ -6,15 +6,12 @@
     <li class="lead"><b>PROCESS DEFINITION ID: </b>{{task.processDefinitionId}}</li>
     <hr class="my-4">
     <div class="lead row text-center">
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <a class="btn btn-primary" [routerLink]="['']" role="button">
           <i class="fa fa-arrow-circle-left"></i> {{backButton}}
         </a>
       </div>
-      <div class="col-sm-4">
-        <button id="deploy-process" class="btn btn-danger" [routerLink]="['deploy']">{{deployProcessLabel}}</button>
-      </div>
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <button id="complete-process" class="btn btn-success" (click)="completeTask()">{{completeProcessLabel}}</button>
       </div>
     </div>
