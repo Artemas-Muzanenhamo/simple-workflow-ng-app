@@ -11,7 +11,9 @@
         <td>{{deployment.getId}}</td>
         <td>{{deployment.getName}}</td>
         <td>{{deployment.getDeploymentTime}}</td>
-        <td><button class="btn btn-danger">DELETE</button></td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteDeployedProcess(deployment.getId)">DELETE</button>
+        </td>
       </tr>
     </table>
   </div>
