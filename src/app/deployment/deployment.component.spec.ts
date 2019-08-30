@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DeploymentComponent } from './deployment.component';
 import {DeploymentService} from './deployment.service';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('DeploymentComponent', () => {
   let component: DeploymentComponent;
@@ -15,7 +16,8 @@ describe('DeploymentComponent', () => {
         DeploymentService
       ],
       imports: [
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        RouterTestingModule
       ]
     })
     .compileComponents();
