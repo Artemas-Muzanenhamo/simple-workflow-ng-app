@@ -1,0 +1,19 @@
+## STAGE 1: Build Angular App ##
+FROM node:11-slim as ng-activiti-demo
+
+MAINTAINER 'Artemas Muzanenhamo'
+
+COPY / /simple-workflow-ng-app
+
+WORKDIR /simple-workflow-ng-app
+
+RUN npm install
+RUN npm install -g @angular/cli
+RUN ng build
+
+## STAGE 2: Run nginx to serve application ##
+FROM nginx
+
+COPY /dist/* /usr/share/nginx/html/
+
+EXPOSE 4200
